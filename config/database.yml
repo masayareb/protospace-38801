@@ -12,10 +12,10 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+#  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#  username: root
+#  password:
+#  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -59,6 +59,6 @@ production:
   <<: *default
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
-  database: protospace_38801_production
-  username: protospace_38801
-  password: <%= ENV['PROTOSPACE_38801_DATABASE_PASSWORD'] %>
+#  database: protospace_38801_production
+#  username: protospace_38801
+#  password: <%= ENV['PROTOSPACE_38801_DATABASE_PASSWORD'] %>
